@@ -27,7 +27,7 @@ export default function Header() {
               <li><Link href="/#pricing-plans" className="hover:text-blue-400" onClick={toggleMenu}>Pricing</Link></li>
               <li><Link href="/#contact" className="hover:text-blue-400" onClick={toggleMenu}>Contact</Link></li>
               <li><Link href="/memorials" className="hover:text-blue-400" onClick={toggleMenu}>Memorials</Link></li>
-              <li><Button variant="outline" onClick={toggleMenu}>Get Started</Button></li>
+              <li><Button variant="outline" onClick={toggleMenu}><Link href={"/dashboard"}> Get Started </Link></Button></li>
             </ul>
           </nav>
         </div>

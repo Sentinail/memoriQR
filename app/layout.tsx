@@ -1,7 +1,5 @@
 import './globals.css'
 import { Geist, Geist_Mono } from "next/font/google";
-import Header from '@/components/header'
-import Footer from '@/components/footer'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,9 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`dark ${geistSans.variable} ${geistMono.variable}`}>
       <body className="min-h-screen flex flex-col bg-[hsl(0_0%_3.9%)]">
-        <Header />
-          <div className="flex-grow">{children}</div>
-        <Footer />
+        <div className="flex-grow">{children}</div>
       </body>
     </html>
   )
