@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Globe, UserPlus, LogIn, QrCode, CheckCircle } from "lucide-react";
+import { Globe, UserPlus, LogIn, QrCode, CheckCircle, PanelsTopLeft } from "lucide-react";
 
 const steps = [
   {
@@ -27,6 +27,12 @@ const steps = [
     icon: QrCode,
   },
   {
+    title: "Manage Pages",
+    description:
+      "Customize your biography pages with photos, videos, and messages.",
+    icon: PanelsTopLeft
+  },
+  {
     title: "Deliver",
     description:
       "Ensure your QR codes are functional and ready for tombstone installation.",
@@ -34,17 +40,17 @@ const steps = [
   },
 ];
 
-export default function HowItWorks() {
+export default function HowToGetStarted() {
   return (
-    <section id="how-it-works" className="py-20 text-white">
+    <section id="how-to-get-started" className="py-20 text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-16 text-center">How It Works</h2>
+        <h2 className="text-3xl font-bold mb-16 text-center">Getting Started</h2>
         <div className="relative">
           <div className="flex flex-col gap-16">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`flex items-center gap-8 ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+                className={`flex items-center gap-8 ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"} transition transform hover:scale-105 duration-300`}
               >
                 <div className="flex-shrink-0 bg-blue-500 rounded-full w-16 h-16 flex items-center justify-center">
                   <step.icon className="h-8 w-8 text-white" />

@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Smartphone, Globe, Lock, Heart } from 'lucide-react'
+import { Smartphone, Globe, Heart, History } from 'lucide-react'
 
 const features = [
   {
@@ -13,14 +13,14 @@ const features = [
     icon: Globe
   },
   {
-    title: "Secure & Private",
-    description: "Control who can view the biography with optional privacy settings.",
-    icon: Lock
+    title: "Tributes and Memories",
+    description: "Share photos, videos, and messages to honor your loved ones.",
+    icon: Heart
   },
   {
     title: "Preserve Legacies",
     description: "Keep your loved ones' stories alive for future generations.",
-    icon: Heart
+    icon: History
   }
 ]
 
@@ -31,7 +31,7 @@ export default function Features() {
         <h2 className="text-3xl font-bold mb-12 text-center">Our Features</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-gray-700 border-gray-600">
+            <Card key={index} className="bg-gray-700 border-gray-600 transition transform hover:scale-105 duration-300">
               <CardHeader>
                 <feature.icon className="h-12 w-12 mb-4 text-blue-500" />
                 <CardTitle>{feature.title}</CardTitle>

@@ -4,53 +4,57 @@ import { Check } from 'lucide-react'
 
 const plans = [
   {
-    name: "Basic",
-    price: "$99",
+    name: "Bronze",
+    price: "250 PHP/month",
     description: "Essential features for a simple memorial",
     features: [
       "QR Code Generation",
       "Basic Biography Page",
-      "1 Year Hosting",
-      "Email Support"
+      "Email Support",
+      "Custom Domain Name (price may vary)"
     ]
   },
   {
-    name: "Premium",
-    price: "$199",
+    name: "Silver",
+    price: "458 PHP/month",
     description: "Advanced features for a comprehensive memorial",
     features: [
       "QR Code Generation",
       "Advanced Biography Page",
       "Photo Gallery",
-      "5 Years Hosting",
+      "Tribute Wall",
       "Priority Email Support",
-      "Visitor Guestbook"
+      "Visitor Guestbook",
+      "Custom Domain Name (price may vary)"
     ]
   },
   {
-    name: "Eternal",
-    price: "$499",
+    name: "Gold",
+    price: "883 PHP/month",
     description: "The ultimate package for a lasting legacy",
     features: [
       "QR Code Generation",
-      "Customizable Biography Page",
+      "Custom Biography Page",
       "Photo and Video Gallery",
-      "Lifetime Hosting",
+      "Tribute Wall",
       "24/7 Phone Support",
       "Interactive Timeline",
-      "Family Tree Integration"
+      "Custom Domain Name (price may vary)"
     ]
   }
 ]
 
 export default function PricingPlans() {
   return (
-    <section id="pricing" className="py-20">
+    <section id="pricing-plans" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Pricing Plans</h2>
+        <h1 className="text-4xl font-bold mb-8 text-center">Pricing Plans</h1>
+        <p className="text-xl mb-12 text-center max-w-2xl mx-auto">
+          Choose the perfect plan to preserve and share your loved one&apos;s legacy.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
-            <Card key={index} className="bg-gray-800 border-gray-700 flex flex-col">
+            <Card key={index} className="bg-gray-800 border-gray-700 flex flex-col transition transform hover:scale-105 duration-300">
               <CardHeader>
                 <CardTitle>{plan.name}</CardTitle>
                 <CardDescription>{plan.description}</CardDescription>
