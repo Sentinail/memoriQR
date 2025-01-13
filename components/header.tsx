@@ -22,10 +22,6 @@ export default function Header() {
           </div>
           <nav className={`${isMenuOpen ? 'block' : 'hidden'} md:block absolute md:relative top-16 left-0 right-0 bg-[hsl(0_0%_3.9%)] md:bg-transparent md:top-0 z-20`}>
             <ul className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 p-4 md:p-0">
-              <li><Link href="/#features" className="hover:text-blue-400" onClick={toggleMenu}>Features</Link></li>
-              <li><Link href="/#how-to-get-started" className="hover:text-blue-400" onClick={toggleMenu}>Getting Started</Link></li>
-              <li><Link href="/#pricing-plans" className="hover:text-blue-400" onClick={toggleMenu}>Pricing</Link></li>
-              <li><Link href="/#contact" className="hover:text-blue-400" onClick={toggleMenu}>Contact</Link></li>
               <li><Link href="/memorials" className="hover:text-blue-400" onClick={toggleMenu}>Memorials</Link></li>
               <li><Button variant="outline" onClick={toggleMenu}><Link href={"/dashboard"}> Get Started </Link></Button></li>
             </ul>
